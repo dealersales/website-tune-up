@@ -405,6 +405,43 @@
      in any headless capture, and an opacity:0 initial state blanks whole sections when
      the observer or the transition does not get a chance to run. */
 
+
+  /* ---------- send us your URL ---------- */
+  section[id]{scroll-margin-top:88px}
+  .start{background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .start-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:start}
+  @media(max-width:900px){.start-grid{grid-template-columns:1fr;gap:30px}}
+  .start h2{font-size:clamp(28px,3.6vw,44px);margin:0 0 14px;max-width:17ch}
+  .start .lede2{color:var(--muted);font-size:16.5px;line-height:1.6;max-width:46ch;margin:0 0 20px}
+  .start-points{list-style:none;margin:0;padding:0;font-size:15px;color:var(--muted)}
+  .start-points li{display:flex;gap:11px;padding:6px 0;line-height:1.5}
+  .start-points svg{flex:0 0 auto;margin-top:5px}
+  .form-card{background:var(--cream);border:1px solid var(--line);border-radius:18px;padding:28px}
+  .form-card h3{font-size:17px;margin:0 0 16px}
+  .field{margin-bottom:13px}
+  .field label{display:block;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+               color:var(--muted);margin-bottom:5px}
+  .field label .opt{color:#A9A49A;font-weight:600;letter-spacing:.06em}
+  .field input{width:100%;padding:13px 14px;border:1px solid #D9D3C6;border-radius:9px;background:#fff;
+               font-family:var(--sans);font-size:15.5px;color:var(--ink);-webkit-appearance:none}
+  .field input::placeholder{color:#B3AEA3}
+  .field input:focus{outline:2px solid var(--orange);outline-offset:1px;border-color:var(--orange)}
+  .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+  .form-card .btn{width:100%;margin-top:8px}
+  .form-note{font-size:12.5px;line-height:1.5;color:var(--muted);margin:12px 0 0;text-align:center}
+  .tu-ok{display:none;text-align:center;padding:14px 4px}
+  .tu-ok .ok-mark{width:46px;height:46px;border-radius:50%;background:#E8F3EB;display:flex;
+                  align-items:center;justify-content:center;margin:0 auto 16px}
+  .tu-ok h3{font-size:20px;margin:0 0 10px}
+  .tu-ok p{color:var(--muted);font-size:15px;line-height:1.6;margin:0 0 10px}
+  .tu-ok p:last-child{margin-bottom:0}
+  .tu-ok b{color:var(--ink)}
+  .tu-error{display:none;background:#FDECEE;border:1px solid #F0C2CA;color:#8F1231;
+            border-radius:9px;padding:11px 13px;font-size:14px;line-height:1.5;margin-bottom:14px}
+  body.is-sent .tu-form{display:none}
+  body.is-sent .tu-ok{display:block}
+  body.is-error .tu-error{display:block}
+
   /* ---------- print / PDF ---------- */
   @media print{
     *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
@@ -431,7 +468,7 @@
     </a>
     <div class="nav-right">
       <span class="nav-note"><b>One fixed price</b> · 5 working days · no call</span>
-      <a class="btn btn-sm" href="mailto:info@sales-consultants.com?subject=Tune-up%20enquiry&body=Our%20website%3A%20%0A%0APlatform%20(if%20you%20know%20it)%3A%20">Start a tune-up <span class="arrow">&rarr;</span></a>
+      <a class="btn btn-sm" href="#start">Start a tune-up <span class="arrow">&rarr;</span></a>
     </div>
   </div>
 </header>
@@ -452,7 +489,7 @@
       </h1>
       <p class="lede">Same cars. Same stock feed. Same phone number. <b>Homepage and vehicle page rebuilt</b> so the site looks like a forecourt people want to walk into &mdash; not the template the dealer down the road is running.</p>
       <div class="cta-row">
-        <a class="btn btn-lg" href="mailto:info@sales-consultants.com?subject=Tune-up%20enquiry&body=Our%20website%3A%20%0A%0APlatform%20(if%20you%20know%20it)%3A%20">Start a tune-up <span class="arrow">&rarr;</span></a>
+        <a class="btn btn-lg" href="#start">Start a tune-up <span class="arrow">&rarr;</span></a>
         <a class="btn btn-lg btn-ghost" href="#what">See what you get</a>
       </div>
       <p class="micro"><b>One price, agreed before we start.</b> Pay once, no retainer.</p>
@@ -545,6 +582,69 @@
     <span>Same stock</span><span>Same feed</span><span>Same domain</span><span>New front door</span><span>5 working days</span><span>Fixed fee</span>
   </div>
 </div>
+
+<!-- ============ SEND US YOUR URL ============ -->
+<section class="block start" id="start">
+  <div class="wrap">
+    <div class="start-grid">
+      <div>
+        <p class="eyebrow">Send us your URL</p>
+        <h2>We&rsquo;ll tell you straight whether it&rsquo;s worth doing.</h2>
+        <p class="lede2">Put your web address in and we&rsquo;ll look at the site the way a customer does &mdash; phone first. One email back, from a person, the same working day.</p>
+        <ul class="start-points">
+          <li><svg width="14" height="14" viewBox="0 0 12 12" fill="none" stroke="#1F7A44" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6.4l2.6 2.6L10 3.2"/></svg><span>What we&rsquo;d change, in plain English</span></li>
+          <li><svg width="14" height="14" viewBox="0 0 12 12" fill="none" stroke="#1F7A44" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6.4l2.6 2.6L10 3.2"/></svg><span>Whichever platform you&rsquo;re on &mdash; including the ones we can&rsquo;t rebuild in place</span></li>
+          <li><svg width="14" height="14" viewBox="0 0 12 12" fill="none" stroke="#1F7A44" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6.4l2.6 2.6L10 3.2"/></svg><span>A price, and an honest no if it isn&rsquo;t worth doing</span></li>
+        </ul>
+      </div>
+
+      <div class="form-card">
+        <div class="tu-error">That didn&rsquo;t send &mdash; check your website address and email, or just email <a href="mailto:info@sales-consultants.com" style="color:#8F1231">info@sales-consultants.com</a>.</div>
+
+        <div class="tu-form">
+          <h3>Two fields &mdash; the rest is optional.</h3>
+          <!-- Posts to admin-ajax, not to this page: WordPress intermittently 404s a POST to the
+                 page's own pretty URL. The handler answers with a redirect back here. -->
+          <form method="post" action="https://sales-consultants.com/wp-admin/admin-ajax.php">
+            <input type="hidden" name="action" value="dsc_tuneup">
+            <div class="hp" aria-hidden="true">
+              <label for="company_url">Company URL</label>
+              <input type="text" id="company_url" name="company_url" tabindex="-1" autocomplete="off">
+            </div>
+            <div class="field">
+              <label for="tu-site">Your website</label>
+              <input type="text" id="tu-site" name="site" required inputmode="url" autocomplete="url"
+                     placeholder="yourdealership.co.uk">
+            </div>
+            <div class="field">
+              <label for="tu-email">Your email</label>
+              <input type="email" id="tu-email" name="email" required autocomplete="email"
+                     placeholder="you@yourdealership.co.uk">
+            </div>
+            <div class="field">
+              <label for="tu-name">Your name <span class="opt">&middot; optional</span></label>
+              <input type="text" id="tu-name" name="name" autocomplete="name">
+            </div>
+            <div class="field">
+              <label for="tu-platform">Which platform <span class="opt">&middot; optional</span></label>
+              <input type="text" id="tu-platform" name="platform"
+                     placeholder="Carro, Click Dealer, WordPress &mdash; if you know">
+            </div>
+            <button class="btn" type="submit">Send my URL <span class="arrow">&rarr;</span></button>
+            <p class="form-note">No card details and no call. We only use it to reply to you.</p>
+          </form>
+        </div>
+
+        <div class="tu-ok">
+          <div class="ok-mark"><svg width="22" height="22" viewBox="0 0 12 12" fill="none" stroke="#1F7A44" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6.4l2.6 2.6L10 3.2"/></svg></div>
+          <h3>Got it &mdash; we&rsquo;ll come back today.</h3>
+          <p>We&rsquo;re looking at <b><!--TU_SITE--></b> now. You&rsquo;ll get one email from a real person: what we&rsquo;d change, what it would cost, and whether it&rsquo;s worth doing at all.</p>
+          <p>If it isn&rsquo;t, we&rsquo;ll say so and leave you alone.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- ============ WHAT YOU GET ============ -->
 <section class="block" id="what">
@@ -694,7 +794,7 @@
 
         <div class="feeoff"><b>If you go bigger.</b> Take a monthly site from us &mdash; or a full rebuild &mdash; within six months and the tune-up fee comes straight off it. You're not buying a one-off, you're buying the deposit.</div>
 
-        <a class="btn" href="mailto:info@sales-consultants.com?subject=Tune-up%20enquiry&body=Our%20website%3A%20%0A%0APlatform%20(if%20you%20know%20it)%3A%20" style="width:100%">Send us your URL <span class="arrow">&rarr;</span></a>
+        <a class="btn" href="#start" style="width:100%">Send us your URL <span class="arrow">&rarr;</span></a>
         <p style="font-size:12.5px;color:var(--muted);margin-top:12px;text-align:center">No card details to find out. We look first.</p>
       </aside>
     </div>
@@ -798,7 +898,7 @@
   <div class="wrap">
     <h2>Send us the URL. We'll tell you <em>straight</em>.</h2>
     <p>One reply, no call, no form to fill in. If your site's fine we'll say so, and if it isn't we'll tell you what we'd change and what it costs.</p>
-    <a class="btn btn-lg" href="mailto:info@sales-consultants.com?subject=Tune-up%20enquiry&body=Our%20website%3A%20%0A%0APlatform%20(if%20you%20know%20it)%3A%20">Start a tune-up <span class="arrow">&rarr;</span></a>
+    <a class="btn btn-lg" href="#start">Start a tune-up <span class="arrow">&rarr;</span></a>
     <p class="micro"><b>5 working days</b> from payment. Hosting, SSL and domain move included. One price in writing before we start, and it comes off a monthly site for six months.</p>
   </div>
 </section>
